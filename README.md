@@ -1,0 +1,1 @@
+# premake-codelite-mingw-examples
