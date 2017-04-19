@@ -32,3 +32,11 @@ replace_project_str.vbs
 premake5 --file=premake-codelite-mingw-examples.lua codelite x64
 replace_project_str.vbs
 ```
+
+
+## 链接库的问题
+
+Codelite 不要求写后缀 ".lib"，但是 Visual Studio 要求写后缀 ".lib"。
+
+生成的 liblua-s.lib 改成 liblua-s 也链接不了，不知为什么 Codelite 生成的 make 改名为 lua-s
+暂且生成 lua-static-s.lib ，引用为 lua-static-s

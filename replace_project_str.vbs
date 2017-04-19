@@ -131,7 +131,7 @@ Sub EachSubFolder(root, re, method)
 End Sub
 
 Function format_source(filename)
-    Echo filename
+    'Echo filename
     '--out-implib=\&quot;../../bin/x86/codelite/gmake-examples/DevCppDLL.lib\&quot;;
     Call ReplaceFileContent(filename, "--out-implib=\\&quot\;(.*?)\\&quot\;", "--out-implib=$1", 1) 
 End Function

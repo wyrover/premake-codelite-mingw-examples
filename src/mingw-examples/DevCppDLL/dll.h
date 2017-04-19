@@ -2,25 +2,24 @@
 #define _DLL_H_
 
 #if BUILDING_DLL
-# define DLLIMPORT __declspec (dllexport)
+    #define DLLIMPORT __declspec (dllexport)
 #else /* Not BUILDING_DLL */
-# define DLLIMPORT __declspec (dllimport)
+    #define DLLIMPORT __declspec (dllimport)
 #endif /* Not BUILDING_DLL */
 
 
 
 class DLLIMPORT DllClass
 {
-  public:
+public:
     DllClass();
     virtual ~DllClass(void);
 
-  private:
+private:
 
 };
 
-struct IXyz
-{
+struct IXyz {
     virtual int Foo(int n) = 0;
     virtual void Release() = 0;
 };
